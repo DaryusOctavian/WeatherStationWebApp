@@ -9,7 +9,7 @@ function Header() {
       <div className="Header">
         <div className="Nav-Buttons">
           <div className="Nav-Button">
-            <Link to="/">Stats</Link>
+            <Link to={App}>Stats</Link>
           </div>
           <div className="Nav-Button">nigger</div>
         </div>
