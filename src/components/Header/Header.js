@@ -1,17 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Header.css";
+import App from "../../App";
 
 function Header() {
   return (
-    <div className="Header">
-      <div className="Nav-Buttons">
-        <div className="Nav-Button">
-            nigger
+    <Router>
+      <div className="Header">
+        <div className="Nav-Buttons">
+          <div className="Nav-Button">
+            <Link to="/">Stats</Link>
+          </div>
+          <div className="Nav-Button">nigger</div>
         </div>
-        <div className="Nav-Button">nigger</div>
       </div>
-    </div>
+    </Router>
   );
 }
 
