@@ -4,17 +4,19 @@
   justify-content: center;
   padding: 1%;
   background-color: #1a1a1a;
-  color: #ffffff;
+  color: #fafafa;
 }
 
 .Nav-Buttons {
   display: inline;
   justify-content: left;
-  padding-right: 30%;
+  padding-right: 3%;
 }
 
 .Nav-Button {
   display: inline;
-  padding: 1%;
+  padding: 2%;
   text-size-adjust: 10%;
+  text-decoration: none;
+  color: #fafafa;
 }

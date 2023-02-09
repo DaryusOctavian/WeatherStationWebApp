@@ -6,12 +6,12 @@ function Header() {
   return (
     <div className='Header'>
       <div className='Nav-Buttons'>
-        <div className='Nav-Button'>
-          <Link to='/'>Stats</Link>
-        </div>
-        <div className='Nav-Button'>
-          <Link to='/about'>About Us</Link>
-        </div>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <div className='Nav-Button'>Stats</div>
+        </Link>
+        <Link to='/about' style={{ textDecoration: 'none' }}>
+          <div className='Nav-Button'>About Us</div>
+        </Link>
       </div>
     </div>
   );
