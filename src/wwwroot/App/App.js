@@ -1,17 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import Stats from '../Stats/Stats';
 import About from '../About/About';
 
 function App() {
   return (
     <div className='App'>
-      <Header />
-      <header className='App-Header'>
-        <p className='Header-Text'>Weather Station Data</p>
-      </header>
-      <Footer />
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Stats />} />
+          <Route exact path='/about' element={<About />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.Stats {
+  text-align: center;
+}
+
+.Stats-Header {
+  background-color: #202020;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: #f0f0f0;
+}
+
+.Header-Text {
+  font-size: larger;
+  color: #f0f0f0;
+}
