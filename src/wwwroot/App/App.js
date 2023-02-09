@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 function App() {
   return (
     <div className="App">
+      //broken Header
       <Header />
       <header className="App-Header">
         <p className="Header-Text">Weather Station Data</p>
