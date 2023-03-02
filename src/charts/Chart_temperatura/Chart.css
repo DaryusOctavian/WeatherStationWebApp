@@ -1,0 +1,9 @@
+.Chart {
+    position: absolute;
+    z-index: 100;  
+    top:30%;  
+    left:32%;  
+    margin:-100px 0 0 -100px;  
+    width:900px;  
+    height:900px;  
+}
