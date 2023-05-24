@@ -1,2 +1,0 @@
-senzor de presiune, temperatura si umiditate
-camera

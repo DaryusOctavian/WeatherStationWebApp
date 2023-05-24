@@ -1,15 +1,6 @@
-.Page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-.content-wrap {
-  padding-bottom: 2.5rem;
-}
-
 .Footer {
   position: absolute;
-  bottom: 0;
+  top: 270%;
   height: 2.5rem;
   width: 100%;
   background-color: #8b22bb;

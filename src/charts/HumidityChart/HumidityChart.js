@@ -9,32 +9,31 @@ import {
   Legend,
 } from "recharts";
 
-import "./TemperatureChart.css";
+import "./HumidityChart.css";
 
-function TemperatureChart({ data, time }) {
+function HumidityChart({ data, time }) {
   if (!Array.isArray(time)) {
     return null;
   }
 
-  // Create an array of objects with 'time' and 'temperature' properties
+  // Create an array of objects with 'time' and 'pressure' properties
   const chartData = time.map((t, index) => ({
     time: t,
-    temperature: data[index],
+    humidity: data[index],
   }));
 
   return (
-    <div className="TemperatureChart">
-      <h1>Temperature</h1>
+    <div className="HumidityChart">
+      <h1>Humidity</h1>
       <LineChart width={800} height={400} data={chartData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="time" />
         <YAxis />
-        <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="temperature" stroke="#c9a326" />
+        <Line type="natural" dataKey="humidity" stroke="#03730f" />
       </LineChart>
     </div>
   );
 }
 
-export default TemperatureChart;
+export default HumidityChart;

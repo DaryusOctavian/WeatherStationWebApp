@@ -1,7 +1,14 @@
 ## To install react scripts and functions, run
+
 `npm install react-scripts@latest`
+
 ## To install react router, run
+
 `npm install react-router-dom`
+
+## To install react charts, run
+
+`npm install recharts`
 
 ## Available Scripts
 

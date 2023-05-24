@@ -1,9 +1,9 @@
-.App {
+.Stats {
   text-align: center;
   background-color: #202020;
 }
 
-.App-Header {
+.Stats-Header {
   background-color: #202020;
   min-height: 100vh;
   display: flex;
@@ -17,8 +17,4 @@
 .Header-Text {
   font-size: larger;
   color: #f0f0f0;
-}
-
-body {
-  background-color: #202020;
 }

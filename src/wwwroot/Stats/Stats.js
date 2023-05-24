@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from "react";
 
 import TemperatureChart from "../../charts/TemperatureChart/TemperatureChart";
-// import PressureChart from "../../charts/PressureChart/Pressure";
+import PressureChart from "../../charts/PressureChart/PressureChart";
+import WindChart from "../../charts/WindChart/WindChart";
+import HumidityChart from "../../charts/HumidityChart/HumidityChart";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import "./Stats.css";
 
 function Stats() {
+  const [temps, setTemp] = useState([]);
+  const [times, setTime] = useState([]);
+  const [pressures, setPressure] = useState([]);
+  const [winds, setWind] = useState([]);
+  const [humiditys, setHumidity] = useState([]);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -24,7 +34,7 @@ function Stats() {
 
       const data = await response.json();
 
-      const temps = [];
+      const temp = [];
       const humidity = [];
       const wind = [];
       const pressure = [];
@@ -32,7 +42,7 @@ function Stats() {
 
       for (const item of data) {
         if (item.dataType === "temp") {
-          temps.push(item.value);
+          temp.push(item.value);
         } else if (item.dataType === "humidity") {
           humidity.push(item.value);
         } else if (item.dataType === "wind") {
@@ -51,28 +61,31 @@ function Stats() {
         if (!time.includes(formattedTime)) {
           time.push(formattedTime);
         }
-      }
 
-      renderCharts(temps, humidity, wind, pressure, time);
-      console.log(temps);
+        setTemp(temp);
+        setTime(time);
+        setPressure(pressure);
+        setHumidity(humidity);
+        setWind(wind);
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  const renderCharts = (temps, humidity, wind, pressure, time) => {
-    return (
-      <div className="Stats">
-        <Header />
-        <header className="Stats-Header">
-          <p className="Header-Text">Weather Station Data</p>
-        </header>
-        <TemperatureChart data={temps} time={time} />
-      </div>
-    );
-  };
-
-  return null;
+  return (
+    <div className="Stats">
+      <Header />
+      <header className="Stats-Header">
+        <p className="Header-Text">Weather Station Data</p>
+      </header>
+      <TemperatureChart data={temps} time={times} />
+      <PressureChart data={pressures} time={times} />
+      <WindChart data={winds} time={times} />
+      <HumidityChart data={humiditys} time={times} />
+      <Footer />
+    </div>
+  );
 }
 
 export default Stats;
