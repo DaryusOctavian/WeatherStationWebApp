@@ -9,6 +9,11 @@ function About() {
     <div>
       <Header />
       <div className='about-us'>
+        <div className='container side-container-Chifor'>
+          <h3>Chifor Darius</h3>
+          <p className='highlighted-text'></p>
+        </div>
+
         <div className='container main-container'>
           <img src={logo} alt='Team Aleph Logo' className='logo' />
           <h2>Made by Team Aleph</h2>
@@ -43,11 +48,6 @@ function About() {
             each team member's unique skills and perspectives contribute to our
             collective success.
           </p>
-        </div>
-
-        <div className='container side-container-Chifor'>
-          <h3>Chifor Darius</h3>
-          <p className='highlighted-text'></p>
         </div>
 
         <div className='container side-container-Raul'>

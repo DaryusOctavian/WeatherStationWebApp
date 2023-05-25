@@ -1,6 +1,6 @@
 .about-us {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -13,23 +13,27 @@
   background-color: #2d2d2d;
   border-radius: 10px;
   margin: 10px;
+  position: relative;
+  justify-content: center;
 }
 
 .main-container {
   position: relative;
-  float: left;
+  /* float: left; */
   top: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .side-container-Chifor {
-  float: left;
+  /* float: left; */
   /* left: 5%; */
   top: 50%;
   position: relative;
 }
 
 .side-container-Raul {
-  float: right;
+  /* float: left; */
   /* right: 5%; */
   top: 50%;
   position: relative;
