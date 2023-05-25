@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/WeatherStationWebApp/static/css/main.e7e35901.css",
+    "main.js": "/WeatherStationWebApp/static/js/main.f530d046.js",
+    "static/js/787.bd717ee6.chunk.js": "/WeatherStationWebApp/static/js/787.bd717ee6.chunk.js",
+    "static/media/aleph-ghosts.png": "/WeatherStationWebApp/static/media/aleph-ghosts.cbc120f2b841b7ef885d.png",
+    "index.html": "/WeatherStationWebApp/index.html",
+    "main.e7e35901.css.map": "/WeatherStationWebApp/static/css/main.e7e35901.css.map",
+    "main.f530d046.js.map": "/WeatherStationWebApp/static/js/main.f530d046.js.map",
+    "787.bd717ee6.chunk.js.map": "/WeatherStationWebApp/static/js/787.bd717ee6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7e35901.css",
+    "static/js/main.f530d046.js"
+  ]
+}
