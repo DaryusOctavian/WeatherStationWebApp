@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import TemperatureChart from "../../charts/TemperatureChart/TemperatureChart";
-import PressureChart from "../../charts/PressureChart/PressureChart";
-import WindChart from "../../charts/WindChart/WindChart";
-import HumidityChart from "../../charts/HumidityChart/HumidityChart";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import "./Stats.css";
+import TemperatureChart from '../../charts/TemperatureChart/TemperatureChart';
+import PressureChart from '../../charts/PressureChart/PressureChart';
+import WindChart from '../../charts/WindChart/WindChart';
+import HumidityChart from '../../charts/HumidityChart/HumidityChart';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import './Stats.css';
 
 function Stats() {
   const [temps, setTemp] = useState([]);
@@ -22,14 +22,14 @@ function Stats() {
   const fetchData = async () => {
     try {
       const api_url_latest =
-        "https://awu4j6hku3.execute-api.eu-central-1.amazonaws.com/dev/weather/latest";
+        'https://awu4j6hku3.execute-api.eu-central-1.amazonaws.com/dev/weather/latest';
       const api_url =
-        "https://awu4j6hku3.execute-api.eu-central-1.amazonaws.com/dev/weather/hist?days=1&group=1";
+        'https://awu4j6hku3.execute-api.eu-central-1.amazonaws.com/dev/weather/hist?days=1&group=1';
 
       const response = await fetch(api_url);
 
       if (!response.ok) {
-        throw new Error("Failed to fetch weather data");
+        throw new Error('Failed to fetch weather data');
       }
 
       const data = await response.json();
@@ -41,21 +41,21 @@ function Stats() {
       const time = [];
 
       for (const item of data) {
-        if (item.dataType === "temp") {
+        if (item.dataType === 'temp') {
           temp.push(item.value);
-        } else if (item.dataType === "humidity") {
+        } else if (item.dataType === 'humidity') {
           humidity.push(item.value);
-        } else if (item.dataType === "wind") {
+        } else if (item.dataType === 'wind') {
           wind.push(item.value);
-        } else if (item.dataType === "pressure") {
+        } else if (item.dataType === 'pressure') {
           pressure.push(item.value);
         }
 
-        const formattedTime = new Date(item.time).toLocaleTimeString("en-US", {
+        const formattedTime = new Date(item.time).toLocaleTimeString('en-US', {
           hour12: false,
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
         });
 
         if (!time.includes(formattedTime)) {
@@ -69,15 +69,15 @@ function Stats() {
         setWind(wind);
       }
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error('Error fetching data:', error);
     }
   };
 
   return (
-    <div className="Stats">
+    <div className='Stats'>
       <Header />
-      <header className="Stats-Header">
-        <p className="Header-Text">Weather Station Data</p>
+      <header className='Stats-Header'>
+        <p className='Header-Text'>Weather Station Data</p>
       </header>
       <TemperatureChart data={temps} time={times} />
       <PressureChart data={pressures} time={times} />

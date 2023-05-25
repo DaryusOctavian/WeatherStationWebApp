@@ -1,5 +1,6 @@
 .about-us {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -9,26 +10,29 @@
   width: 500px;
   height: 700px;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: #2d2d2d;
   border-radius: 10px;
   margin: 10px;
 }
 
 .main-container {
-  position: absolute;
+  position: relative;
+  float: left;
   top: 10%;
 }
 
 .side-container-Chifor {
-  left: 5%;
+  float: left;
+  /* left: 5%; */
   top: 50%;
-  position: absolute;
+  position: relative;
 }
 
 .side-container-Raul {
-  right: 5%;
+  float: right;
+  /* right: 5%; */
   top: 50%;
-  position: absolute;
+  position: relative;
 }
 
 .logo {
@@ -39,17 +43,17 @@
 h2 {
   font-size: 24px;
   margin-top: 0;
-  color: #333;
+  color: #fff;
 }
 
 .description {
   font-size: 18px;
-  color: #666;
+  color: #ddd;
   margin-bottom: 30px;
 }
 
 .highlighted-text {
   font-size: 16px;
-  color: #555;
+  color: #eee;
   margin-bottom: 15px;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -7,9 +7,9 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
+} from 'recharts';
 
-import "./PressureChart.css";
+import './PressureChart.css';
 
 function PressureChart({ data, time }) {
   if (!Array.isArray(time)) {
@@ -23,14 +23,15 @@ function PressureChart({ data, time }) {
   }));
 
   return (
-    <div className="PressureChart">
-      <h1>Pressures</h1>
+    <div className='PressureChart'>
+      <p className='title'>Pressures</p>
       <LineChart width={800} height={400} data={chartData}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="time" />
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='time' />
         <YAxis />
+        <Tooltip />
         <Legend />
-        <Line type="natural" dataKey="pressure" stroke="#d4360b" />
+        <Line type='natural' dataKey='pressure' stroke='#d4360b' />
       </LineChart>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -7,9 +7,9 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
+} from 'recharts';
 
-import "./TemperatureChart.css";
+import './TemperatureChart.css';
 
 function TemperatureChart({ data, time }) {
   if (!Array.isArray(time)) {
@@ -23,15 +23,15 @@ function TemperatureChart({ data, time }) {
   }));
 
   return (
-    <div className="TemperatureChart">
-      <h1>Temperature</h1>
+    <div className='TemperatureChart'>
+      <p className='title'>Temperature</p>
       <LineChart width={800} height={400} data={chartData}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="time" />
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='time' />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="temperature" stroke="#c9a326" />
+        <Line type='natural' dataKey='temperature' stroke='#c9a326' />
       </LineChart>
     </div>
   );

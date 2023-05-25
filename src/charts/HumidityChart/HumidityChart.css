@@ -1,9 +1,15 @@
 .HumidityChart {
-  position: absolute;
-  z-index: 100;
-  top: 190%;
-  left: 35%;
-  margin: -100px 0 0 -110px;
+  position: relative;
+  /* z-index: 100; */
+  /* top: 190%; */
+  /* left: 27%; */
+  /* margin: -100px 0 0 -100px; */
+  margin: auto;
   width: 900px;
-  height: 900px;
+  height: 500px;
+}
+
+.title {
+  color: #fafafa;
+  font-size: 30px;
 }

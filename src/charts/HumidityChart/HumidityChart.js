@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -7,9 +7,9 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
+} from 'recharts';
 
-import "./HumidityChart.css";
+import './HumidityChart.css';
 
 function HumidityChart({ data, time }) {
   if (!Array.isArray(time)) {
@@ -23,14 +23,15 @@ function HumidityChart({ data, time }) {
   }));
 
   return (
-    <div className="HumidityChart">
-      <h1>Humidity</h1>
+    <div className='HumidityChart'>
+      <p className='title'>Humidity</p>
       <LineChart width={800} height={400} data={chartData}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="time" />
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='time' />
         <YAxis />
+        <Tooltip />
         <Legend />
-        <Line type="natural" dataKey="humidity" stroke="#03730f" />
+        <Line type='natural' dataKey='humidity' stroke='#03730f' />
       </LineChart>
     </div>
   );

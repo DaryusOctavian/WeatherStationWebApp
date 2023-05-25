@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -7,9 +7,9 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
+} from 'recharts';
 
-import "./WindChart.css";
+import './WindChart.css';
 
 function WindChart({ data, time }) {
   if (!Array.isArray(time)) {
@@ -23,14 +23,15 @@ function WindChart({ data, time }) {
   }));
 
   return (
-    <div className="WindChart">
-      <h1>Wind</h1>
+    <div className='WindChart'>
+      <p className='title'>Wind</p>
       <LineChart width={800} height={400} data={chartData}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="time" />
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='time' />
         <YAxis />
+        <Tooltip />
         <Legend />
-        <Line type="natural" dataKey="wind" stroke="#8884d8" />
+        <Line type='natural' dataKey='wind' stroke='#8884d8' />
       </LineChart>
     </div>
   );
